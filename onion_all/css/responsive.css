@@ -155,7 +155,7 @@
 }
 
 
-@media (max-width: 403px){
+@media (max-width: 392px){
     .container{
         flex-direction: column;
     }
@@ -181,7 +181,7 @@
 
     .menu{
         top: -30px;
-        left: 113px;
+        left: 118px;
     }
 
     .menu li{

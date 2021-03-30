@@ -166,7 +166,7 @@
     }
 }
 
-@media (max-width: 403px){
+@media (max-width: 392px){
     .logo{
         position: relative;
     }
@@ -205,7 +205,7 @@
     }
 
     input.toggleMenu:checked + label.toggleMenu ~ ul.menu{
-        right:40px;
+        right: 36px;
         transition: 1s;
     }
 
@@ -223,7 +223,7 @@
     }
 
     .container2 p{
-        width: 400px;
+        width: 382px;
     }
 
     .vision__photo, .mission__photo,  .vision__photo img, .mission__photo img{
