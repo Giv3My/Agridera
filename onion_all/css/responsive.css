@@ -154,7 +154,8 @@
     }
 }
 
-@media (max-width: 375px){
+
+@media (max-width: 403px){
     .container{
         flex-direction: column;
     }
@@ -174,17 +175,17 @@
 
     label.toggleMenu{
         top: 30px;
-        left: 300px;
+        left: 330px;
         margin: 0;
     }
 
     .menu{
         top: -30px;
-        left: 104px;
+        left: 113px;
     }
 
     .menu li{
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .content__text p:last-child::before{
@@ -208,6 +209,30 @@
 
     .links a{
         font-size: 10px;
+    }
+
+    .links__img img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .section__2 h4{
+        font-size: 11px;
+        padding: 12px 0 10px 0;
+    }
+}
+
+@media (max-width: 375px){
+    label.toggleMenu{
+        left: 300px;
+    }
+
+    .menu{
+        left: 104px;
+    }
+
+    .menu li{
+        font-size: 12px;
     }
 
     .footer a{
