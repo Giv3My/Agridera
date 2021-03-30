@@ -134,7 +134,7 @@
     }
 }
 
-@media (max-width: 375px){
+@media (max-width: 403px){
     .container{
         flex-direction: column;
     }
@@ -154,17 +154,17 @@
 
     label.toggleMenu{
         top: 30px;
-        left: 300px;
+        left: 330px;
         margin: 0;
     }
 
     .menu{
         top: -30px;
-        left: 104px;
+        left: 113px;
     }
 
     .menu li{
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .cart__item{
@@ -184,15 +184,15 @@
     }
 
     .contact-us input{
-        width: 296px;
+        width: 369px;
     }
 
     .contact-us select{
-        width: 320px;
+        width: 393px;
     }
 
     .contact-us textarea{
-        width: 350px;
+        width: 387px;
         height: 300px;
     }
 
@@ -211,6 +211,47 @@
 
     .links a{
         font-size: 10px;
+    }
+
+    .links__img img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .section__2 h4{
+        font-size: 11px;
+        padding: 12px 0 10px 0;
+    }
+}
+
+@media (max-width: 375px){
+    label.toggleMenu{
+        left: 300px;
+    }
+
+    .menu{
+        left: 104px;
+    }
+
+    .menu li{
+        font-size: 12px;
+    }
+
+    .contact-us input{
+        width: 341px;
+    }
+
+    .contact-us select{
+        width: 365px;
+    }
+
+    .contact-us textarea{
+        width: 359px;
+        height: 300px;
+    }
+
+    .input__code input{
+        width: 201px;
     }
 
     .footer a{
