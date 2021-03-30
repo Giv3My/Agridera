@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Roboto&family=Roboto+Slab:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="content">
+            <div class="container">
+                <img src="img/Logo.png" alt="logo" class="logo" width="166" height="83">
+                <div class="nav">
+                    <div class="search">
+                        <input type="search" placeholder="Search" size="30">
+                        <button class="seacrh_btn">
+                            <img src="img/search.png" alt="search" class="search_logo" width="18" height="18">
+                        </button>
+                    </div>
+                    <input type="checkbox" class="toggleMenu" id="menu">
+                        <label for="menu" class="toggleMenu">
+                            <img src="img/menu.png" width="40px" height="40px" alt="">
+                        </label>
+                    <ul class="menu">
+                        <li><a href="../homepage/homepage.html">Home</a></li>
+                        <li><a href="#">Company profile</a></li>
+                        <li><a href="../onion_all/onion_all.html">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">R & D</a></li>
+                        <li><a href="../contact_us/contact_us.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="header__bg"></div>
+    </header>
+    <div class="container2" id="prod">
+        <div class="contact-us__title">
+            <h1>Contact us</h1>
+            <img src="img/cross.png" alt="cross" class="cross__img">
+        </div>
+        <div class="cart">
+            <ul class="cart__list" >
+                <li v-for="item in cart">
+                    <div class="cart__item">
+                        <img :src="'../onion_one/img/'+item.image" alt="" width="100" height="100">
+                        <h2>{{item.title}}</h2>
+                        <p>{{item.short_text}}</p>
+                        <a class="cart-cross-img" href="#" @click.prevent="removeFromCart(item.id)">
+                            <img src="img/cross-cart.png" alt="" width="20" height="20">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <form action="" class="contact-us" @submit.prevent="makeOrder()" v-if="formVisible">
+            <div class="col1">
+                <span class="input__title">Name *</span> <br>
+                <input type="text" name="name" v-model="contactFields.name" required="required"> <br>
+                <span class="input__title">Company Name</span> <br>
+                <input type="text" name="company-name" v-model="contactFields.com_name"> <br>
+                <span class="input__title">Position</span> <br>
+                <input type="text" name="position" v-model="contactFields.position"> <br>
+                <span class="input__title">City</span> <br>
+                <input type="text" name="city" v-model="contactFields.city"> <br>
+                <span class="input__title">Country</span> <br>
+                <input type="text" name="country" v-model="contactFields.country"> <br>
+                <span class="input__title">Telephone</span> <br>
+                <input type="tel" name="telephone" maxlength="12" v-model="contactFields.phone"> <br>
+                <span class="input__title">Email *</span> <br>
+                <input type="email" name="email" v-model="contactFields.email" required="required">
+            </div>
+            <div class="col2">
+                <span class="input__title">You are a</span> <br>
+                <select name="wai" v-model="contactFields.select">
+                    <option value="seed producer">seed producer</option>
+                </select> <br>
+                <span class="input__title">If other, please specify</span> <br>
+                <input type="text" name="other" v-model="contactFields.other"> <br>
+                <span class="input__title">You are interested in</span> <br>
+                <textarea cols="30" rows="10" v-model="contactFields.textarea"></textarea>
+                <div class="input__code">
+                    <div class="input__code__title">
+                        <span class="input__title">Please type this code</span>
+                    </div>
+                    <div class="input__code__field">
+                        <div class="img__code__field"></div>
+                        <input type="text" name="code" v-model="contactFields.code">
+                        <button class="send-msg-btn">Send Message</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <ul class="fields" v-if="!formVisible">
+                <li>
+                    <h2>Name</h2>
+                    <p>{{contactFields.name}}</p>
+                </li>
+                <li>
+                    <h2>Company Name</h2>
+                    <p>{{contactFields.com_name}}</p>
+                </li>
+                <li>
+                    <h2>Position</h2>
+                    <p>{{contactFields.position}}</p>
+                </li>
+                <li>
+                    <h2>City</h2>
+                    <p>{{contactFields.city}}</p>
+                </li>
+                <li>
+                    <h2>Country</h2>
+                    <p>{{contactFields.country}}</p>
+                </li>
+                <li>
+                    <h2>Telephone</h2>
+                    <p>{{contactFields.phone}}</p>
+                </li>
+                <li>
+                    <h2>Email</h2>
+                    <p>{{contactFields.email}}</p>
+                </li>
+                <li>
+                    <h2>You are a</h2>
+                    <p>{{contactFields.select}}</p>
+                </li>
+                <li>
+                    <h2>If other, please specify</h2>
+                    <p>{{contactFields.other}}</p>
+                </li>
+                <li>
+                    <h2>You are interested in</h2>
+                    <p>{{contactFields.textarea}}</p>
+                </li>
+        </ul>
+    </div>
+    <div class="address__area">
+        <div class="address__title">
+            <h4>Our Address</h4>
+        </div>
+        <p>
+            AGRIDERA Seeds & Agriculture Ltd. <br>
+            P.O Box 103, <br>
+            Gedera 70750, Israel.
+        </p>
+        <p>Telephone: <font color="#57984C">+972 8 944 9222</font></p>
+    </div>
+    <div class="footer">
+        <footer class="section__1">
+            <div class="links">
+                <a href="#">Profile</a>
+                <a href="#">Management</a>
+                <a href="../onion_all/onion_all.html">Products</a>
+                <a href="#">R&D</a>
+                <a href="#">Links</a>
+                <a href="#">Sitemap</a>
+                <a href="../contact_us/contact_us.html">Contact</a>
+            </div>
+            <div class="links__img">
+                <a href="#"><img src="img/in.png" alt="in"></a>
+                <a href="#"><img src="img/inst.png" alt="inst"></a>
+                <a href="#"><img src="img/yt.png" alt="yt"></a>
+                <a href="#"><img src="img/tw.png" alt="tw"></a>
+                <a href="#"><img src="img/fb.png" alt="fb"></a>
+            </div>
+        </footer>
+        <footer class="section__2">
+            <h4>AGRIDERA SEEDS & AGRICULTURE LTD. © 2021</h4>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="../script/main.js"></script>
+
+</body>
+
+</html>
