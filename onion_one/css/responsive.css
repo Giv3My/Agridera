@@ -112,7 +112,7 @@
     }
 }
 
-@media (max-width: 398px){
+@media (max-width: 403px){
     .container{
         flex-direction: column;
     }
@@ -130,6 +130,10 @@
         margin-top: 30px;
     }
 
+    .search input{
+        margin-right: 65px;
+    }
+
     label.toggleMenu{
         top: 30px;
         left: 330px;
@@ -138,7 +142,7 @@
 
     .menu{
         top: -30px;
-        left: 115px;
+        left: 118px;
     }
 
     .menu li{
@@ -216,6 +220,10 @@
 @media (max-width: 375px){
     label.toggleMenu{
         left: 300px;
+    }
+
+    .search input{
+        margin-right: 85px;
     }
 
     .menu{
