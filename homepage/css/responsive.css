@@ -166,7 +166,7 @@
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 398px){
     .logo{
         position: relative;
     }
@@ -205,7 +205,7 @@
     }
 
     input.toggleMenu:checked + label.toggleMenu ~ ul.menu{
-        right: 40px;
+        right: 39px;
         transition: 1s;
     }
 
@@ -280,12 +280,6 @@
     .section__2 h4{
         font-size: 11px;
         padding: 12px 0 10px 0;
-    }
-}
-
-@media (max-width: 392px){
-    input.toggleMenu:checked + label.toggleMenu ~ ul.menu{
-        right: 36px;
     }
 }
 

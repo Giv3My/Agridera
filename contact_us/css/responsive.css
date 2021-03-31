@@ -134,7 +134,7 @@
     }
 }
 
-@media (max-width: 392px){
+@media (max-width: 398px){
     .container{
         flex-direction: column;
     }
@@ -160,7 +160,7 @@
 
     .menu{
         top: -30px;
-        left: 118px;
+        left: 115px;
     }
 
     .menu li{
@@ -184,15 +184,15 @@
     }
 
     .contact-us input{
-        width: 358px;
+        width: 364px;
     }
 
     .contact-us select{
-        width: 382px;
+        width: 388px;
     }
 
     .contact-us textarea{
-        width: 376px;
+        width: 382px;
         height: 300px;
     }
 
