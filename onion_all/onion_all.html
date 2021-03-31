@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnionAll</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Roboto&family=Roboto+Slab:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="img/Logo.png" alt="logo" class="logo" width="166" height="83">
+            <div class="nav">
+                <div class="search">
+                    <input type="search" placeholder="Search" size="30">
+                    <button class="seacrh_btn">
+                        <img src="img/search.png" alt="search" class="search_logo" width="18" height="18">
+                    </button>
+                </div>
+                    <input type="checkbox" class="toggleMenu" id="menu">
+                        <label for="menu" class="toggleMenu">
+                            <img src="img/menu.png" width="40px" height="40px" alt="">
+                        </label>
+                    <ul class="menu">
+                        <li><a href="../homepage/homepage.html">Home</a></li>
+                        <li><a href="#">Company profile</a></li>
+                        <li><a href="../onion_all/onion_all.html">Products</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">R & D</a></li>
+                        <li><a href="../contact_us/contact_us.html">Contact</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="header__bg"></div>
+    </header>
+    <div class="container2">
+        <div class="content">
+            <div class="content__title">
+                <h1>Agridera Fresh Market Onion Hybrids</h1>
+                <img src="img/cross.png" alt="cross">
+            </div>
+            <div class="content__text">
+                <p>
+                    Agridera aims to be one of the world's leading companies in the breeding, production, and marketing
+                    of onion seeds. <b> We invest intensively in research and development to provide solutions to
+                        growers and consumers in
+                        numerous countries around the world. </b>
+                    In particular, we breed improved disease-resistant cultivars adapted to different markets globally.
+                </p>
+                <p>
+                    Currently, emphasis is placed on combining Onion Yellow Leaf Curl Virus (TYLCV) and Onion Spotted
+                    Wilt Virus (TSWV) resistances
+                    with other soil borne diseases into superior onion breeding lines and hybrids. Moreover,
+                    comprehensive efforts are being undertaken to
+                    develop varieties resistance to TBRFV virus (Onion Brown Rugose Fruit Virus).
+                </p>
+                <p>
+                    In terms of horticultural traits, breeding is for earliness, different fruit sizes, firmness, red
+                    fruit color, flavor, crack resistance, shelf life,
+                    and high/low temperature fruit set. Combinations of quality features and disease resistance are
+                    sought in a variety of types, namely
+                    round and elongated shapes.
+                </p>
+                <p>
+                    Agirdera Onion breeding programs are focusing on three main segments: Greenhouse Indeterminate
+                    Tomatoes, Open-field
+                    Indeterminate Tomatoes, and Bush Type Open-field Tomatoes.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <div class="content2">
+            <div class="breeding_onions">
+                <ul>
+                    <li>
+                        <p class="breeding__title">Greenhouse Onion Breeding <br> Program</p>
+                        <p class="breeding__text">
+                            <b>This breeding is aimed for the Spanish
+                                and Turkish markets.</b> For single and cluster
+                            picks, round fruit shape and resistances of
+                            TYLCV, TSWV, Nematodes and FORL
+                            (Fusarium oxysporum f.sp. <br>
+                            radicis-lycopersici). Some hybrids may
+                            include more resistances, such as
+                            Cladosporium and Leveillula Taurica (Lv).
+                        </p>
+                    </li>
+                    <li>
+                        <p class="breeding__title">Open-field Indeterminate <br> Onion</p>
+                        <p class="breeding__text">
+                            <b>This breeding is for Brazilian, Moroccan,
+                                and Turkish markets.</b> The main focus is on
+                            large round shape fruits (200 grams plus);
+                            and resistances of TYLCV, TSWV,
+                            Nematodes and FORL. In the near future, F3
+                            (Fusarium oxysporum f.sp. lycopersici) will
+                            be included as basic resistance in our cultivars.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="breeding__title">Open-field Bush Type <br> Onion</p>
+                        <p class="breeding__text">
+                            <b>This breeding is for Mediterranean
+                                markets.</b> We breed round and elongated
+                            shapes, standard sizes (140- 180 grams),
+                            and beef sizes (min. 180 grams up to 300
+                            grams and more). We combine the
+                            resistances of TYLCV, TSWV and
+                            Nematodes as basic resistances in our
+                            hybrids. However, some hybrids may
+                            include more resistances, such as
+                            Cladosporium and Leveillula Taurica (Lv)
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container4" id="prod">
+        <div class="onion__types">
+            <p class="phrase">
+                Agridera operates through international and local distributers around the world.
+            </p>
+            <ul>
+                <a :href="'../onion_one/onion_one.html#' + item.id" v-for="item in products">
+                    <li class="onion-list">
+                        <div class="onion__img">
+                            <img :src="'img/'+item.image" alt="" class="tomato__photo">
+                        </div>
+                        <div class="onion__text">
+                            <h2>{{item.title}}</h2>
+                            <p>{{item.short_text}}</p>
+                        </div>
+                    </li>
+                </a>
+                <li class="onion-list-o"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+        <footer class="section__1">
+            <div class="links">
+                <a href="#">Profile</a>
+                <a href="#">Management</a>
+                <a href="../onion_all/onion_all.html">Products</a>
+                <a href="#">R&D</a>
+                <a href="#">Links</a>
+                <a href="#">Sitemap</a>
+                <a href="../contact_us/contact_us.html">Contact</a>
+            </div>
+            <div class="links__img">
+                <a href="#"><img src="img/in.png" alt="in"></a>
+                <a href="#"><img src="img/inst.png" alt="inst"></a>
+                <a href="#"><img src="img/yt.png" alt="yt"></a>
+                <a href="#"><img src="img/tw.png" alt="tw"></a>
+                <a href="#"><img src="img/fb.png" alt="fb"></a>
+            </div>
+        </footer>
+        <footer class="section__2">
+            <h4>AGRIDERA SEEDS & AGRICULTURE LTD. © 2021</h4>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="../script/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnionOne</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Roboto&family=Roboto+Slab:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <img src="img/Logo.png" alt="logo" class="logo" width="166" height="83">
+            <div class="nav">
+                <div class="search">
+                    <input type="search" placeholder="Search" size="30">
+                    <button class="seacrh_btn">
+                        <img src="img/search.png" alt="search" class="search_logo" width="18" height="18">
+                    </button>
+                </div>
+                <input type="checkbox" class="toggleMenu" id="menu">
+                    <label for="menu" class="toggleMenu">
+                        <img src="img/menu.png" width="40px" height="40px" alt="">
+                    </label>
+                <ul class="menu">
+                    <li><a href="../homepage/homepage.html">Home</a></li>
+                    <li><a href="#">Company profile</a></li>
+                    <li><a href="../onion_all/onion_all.html">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">R & D</a></li>
+                    <li><a href="../contact_us/contact_us.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <div class="container2" id="prod">
+        <div class="content2">
+            <div class="return">
+                <img src="img/Arrow.png" alt="return" class="return__arrow" width="25" height="8">
+                <a href="../onion_all/onion_all.html">Return to all onions</a>
+            </div>
+            <div class="tomato__name">
+                <div class="tomato__name__text">
+                    <h1>{{product.title}}</h1>
+                    <h2>{{product.short_text}}</h2>
+                    <img src="img/cross.png" alt="cross" class="cross__img">
+                    <div class="tomato__name__subtext">
+                        <img src="img/tomato_ico.png" alt="tomato-ico" class="tomato__ico">
+                        <h3>Very high yield and <br> excellent fruits quality!</h3>
+                    </div>
+                    <div class="characteristics__main">
+                        <h4 class="characteristics__title">characteristics</h4>
+                        <p class="details"><b>Resistance</b></p>
+                        <p class="details">HR: ToMV:0-2; Fol: 1,2; Ve/Vd; </p>
+                        <p class="details">IR: TYLCV</p>
+                    </div>
+                    <div class="list">
+                        <div class="list__section_1">
+                            <h4 class="characteristics__title">Plant</h4>
+                            <ul>
+                                <li><span>Strong vigor that provides good leaf coverage.</span>
+                                <li><span>Very high productivity with good fruit setting.</span></li>
+                                <li><span>Early matured variety.</span></li>
+                            </ul>
+                            <h4 class="characteristics__title">Fruit</h4>
+                            <ul>
+                                <li><span>Long shelf life on plant and post harvest.</span></li>
+                                <li><span>Nice shiny attractive deep red color.</span></li>
+                                <li><span>Average fruit size: 140 – 160 grams.</span></li>
+                            </ul>
+                        </div>
+                        <div class="list__section_2">
+                            <h4 class="characteristics__title">Cycle</h4>
+                            <ul>
+                                <li><span>Spring</span></li>
+                                <li><span>Fall</span></li>
+                                <li><span>Winter</span></li>
+                            </ul>
+                            <h4 class="characteristics__title">Color</h4>
+                            <span style="padding-left: 0;">Red</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tomato__name__img">
+                    <img :src="'img/'+product.image" alt="tomato" width="540" height="498">
+                    <a class="add_to_cart" @click.prevent="addToCart(product.id)" v-if = "!btnVisible">
+                        <p>Add to cart</p>
+                    </a>
+                    <a href="../contact_us/contact_us.html" class="add_to_cart" v-if = "btnVisible">
+                        <p>Go to cart</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <footer class="section__1">
+            <div class="links">
+                <a href="#">Profile</a>
+                <a href="#">Management</a>
+                <a href="../onion_all/onion_all.html">Products</a>
+                <a href="#">R&D</a>
+                <a href="#">Links</a>
+                <a href="#">Sitemap</a>
+                <a href="../contact_us/contact_us.html">Contact</a>
+            </div>
+            <div class="links__img">
+                <a href="#"><img src="img/in.png" alt="in"></a>
+                <a href="#"><img src="img/inst.png" alt="inst"></a>
+                <a href="#"><img src="img/yt.png" alt="yt"></a>
+                <a href="#"><img src="img/tw.png" alt="tw"></a>
+                <a href="#"><img src="img/fb.png" alt="fb"></a>
+            </div>
+        </footer>
+        <footer class="section__2">
+            <h4>AGRIDERA SEEDS & AGRICULTURE LTD. © 2021</h4>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="../script/main.js"></script>
+    
+</body>
+
+</html>

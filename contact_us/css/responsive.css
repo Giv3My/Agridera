@@ -1,0 +1,321 @@
+@media (max-width: 1024px){
+    .container{
+        width: 900px;
+        justify-content: flex-start;
+    }
+
+    .nav{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search{
+        margin-left: 115px;
+        margin-top: 30px;
+    }
+
+    label.toggleMenu{
+        position: absolute;
+        display: block;
+        cursor: pointer;
+        margin-top: 25px;
+        left: 830px;
+    }
+
+    .menu li{
+        font-size: 18px;
+        margin: 0;
+        padding: 3px;
+    }
+
+    .menu a{
+        padding: 0;
+    }
+
+    .menu{
+        display: none;
+        position: relative;
+        flex-direction: column;
+        padding: 0;
+        text-align: right;
+        top: -10px;
+        left: 504px;
+    }
+
+    input.toggleMenu:checked + label.toggleMenu ~ ul.menu{
+        display: flex;
+    }
+
+    .container2{
+        width: 100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .section__1{
+        width: 100%;
+        justify-content: space-around
+    }
+
+    .links a{
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 100%;
+    }
+
+    .search{
+        margin-left: 80px;
+    }
+
+    label.toggleMenu{
+        left: 680px;
+    }
+
+    .menu{
+        left: 414px;
+    }
+
+    .contact-us__title{
+        text-align: center;
+    }
+
+    .contact-us{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .col1 input{
+        width: 296px; 
+    }
+
+    .col2 input{
+        width: 396px;
+    }
+
+    .col2 select{
+        width: 420px;
+    }
+
+    .col2 textarea{
+        width: 414px;
+    }
+
+    .input__code__title{
+        text-align: center;
+    }
+
+    .input__code__field{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img__code__field{
+        margin-top: 10px;
+        margin-right: 0;
+    }
+
+    .input__code input{
+        width: 201px;
+    }
+
+    .send-msg-btn{
+        margin: 0;
+        top: -5px;
+    }
+
+    .links a{
+        font-size: 14px;
+        padding-right: 10px;
+    }
+}
+
+@media (max-width: 403px){
+    .container{
+        flex-direction: column;
+    }
+
+    .nav{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .search, .menu{
+        margin: 0;
+    }
+
+    .search{
+        margin-top: 30px;
+    }
+
+    .search input{
+        margin-right: 65px;
+    }
+
+    label.toggleMenu{
+        top: 30px;
+        left: 330px;
+        margin: 0;
+    }
+
+    .menu{
+        top: -30px;
+        left: 118px;
+    }
+
+    .menu li{
+        font-size: 14px;
+    }
+
+    .cart__item{
+        flex-direction: column;
+    }
+
+    .cart__item img{
+        margin-bottom: 20px;
+    }
+
+    .cart__item img:last-child{
+        margin: 0;
+    }
+
+    .contact-us{
+        align-items: flex-start;
+    }
+
+    .contact-us input{
+        width: 362px;
+    }
+
+    .contact-us select{
+        width: 384px;
+    }
+
+    .contact-us textarea{
+        width: 378px;
+        height: 300px;
+    }
+
+    .input__code input{
+        width: 201px;
+    }
+
+    .section__1{
+        flex-direction: column;
+        padding: 15px 0 15px 0;
+    }
+
+    .links{
+        margin-bottom: 10px;
+    }
+
+    .links a{
+        font-size: 10px;
+    }
+
+    .links__img img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .section__2 h4{
+        font-size: 11px;
+        padding: 12px 0 10px 0;
+    }
+}
+
+@media (max-width: 375px){
+    label.toggleMenu{
+        left: 300px;
+    }
+
+    .search input{
+        margin-right: 85px;
+    }
+
+    .menu{
+        left: 104px;
+    }
+
+    .menu li{
+        font-size: 12px;
+    }
+
+    .contact-us input{
+        width: 341px;
+    }
+
+    .contact-us select{
+        width: 365px;
+    }
+
+    .contact-us textarea{
+        width: 359px;
+        height: 300px;
+    }
+
+    .input__code input{
+        width: 201px;
+    }
+
+    .footer a{
+        padding-right: 5px;
+    }
+
+    .links__img img{
+        width: 20px;
+        height: 20px;
+    }
+
+    .section__2 h4{
+        font-size: 10px;
+        padding: 12px 0 10px 0;
+    }
+}
+
+@media (max-width: 320px){
+    .search input{
+        margin-right: 35px;
+    }
+
+    .search::after{
+        width: 300px;
+    }
+
+    label.toggleMenu{
+        left: 260px;
+    }
+
+    .menu {
+        left: 91px;
+    }
+
+    .header__bg{
+        height: 340px;
+    }
+
+    .contact-us input{
+        width: 286px;
+    }
+
+    .contact-us select{
+        width: 310px;
+    }
+
+    .contact-us textarea{
+        width: 304px;
+        height: 290px;
+    }
+
+    .input__code input{
+        width: 201px;
+    }
+
+    .links a{
+        font-size: 9px;
+    }
+}
