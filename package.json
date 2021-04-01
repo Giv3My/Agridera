@@ -4,7 +4,7 @@
   "description": "bobe",
   "main": "index.js",
   "scripts": {
-    "start": "http-server ./homepage"
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
