@@ -4,7 +4,7 @@ self.addEventListener('install', function (event){
         caches.open("static")
             .then(function (cache){
                 console.log("precaching");
-                cache.add('/homepage/homepage.html');
+                cache.add('homepage/homepage.html');
                 cache.add('/');
             })
     );
