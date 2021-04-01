@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="manifest" href="../manifest.json">
+    <script>
+        if ('serviceWorker' in navigator){
+            navigator.serviceWorker
+            .register('/../sw.js')
+            .then(function (){
+                    console.log('Service worker registered!');
+                });
+        }
+    </script>
 </head>
 
 <body>
