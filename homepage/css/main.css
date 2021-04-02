@@ -112,7 +112,6 @@ ul, li {
     display: block;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    width: 160px;
     height: 55px;
     background: #57984C;
     color: #fff;
@@ -120,6 +119,8 @@ ul, li {
     line-height: 1.6em;
     text-decoration: none;
     text-transform: uppercase;
+    cursor: pointer;
+    user-select: none;
     padding: 16px;
     transition: all 0.6s;
 }
